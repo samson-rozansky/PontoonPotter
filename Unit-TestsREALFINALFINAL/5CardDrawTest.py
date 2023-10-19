@@ -132,7 +132,7 @@ def pontoon():
         
         while dealer.calculate_hand_value() < 17:
             dealer.add_card(deck.pop())
-        
+        print("Dealer's hand: " + ', '.join(f"{card.rank} of {card.suit}" for card in dealer.hand))
         def splitCheck(player,deltaBank):
             done = False
             for i in range(len(players)):
