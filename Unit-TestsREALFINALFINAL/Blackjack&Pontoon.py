@@ -100,7 +100,7 @@ def pontoon():
                         newCard = Card("A","Spade")
                         print(f"{newCard.rank} of {newCard.suit}")
                         player.add_card(newCard)
-                        break
+                        
                     else:
                         print("Invalid option for doubling down.")
                 elif choice == 's':
