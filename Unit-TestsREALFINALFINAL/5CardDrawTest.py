@@ -1,5 +1,5 @@
 import random
-
+import os
 class Card:
     def __init__(self, rank, suit):
         self.rank = rank
@@ -64,6 +64,7 @@ def pontoon():
         # Player's turn
         for player in players:
             while True:
+                os.system('cls')
                 print(f"\n{player.name}'s turn:")
                 print("Your hand: " + ', '.join(f"{card.rank} of {card.suit}" for card in player.hand))
                 print("Hand value: " + str(player.calculate_hand_value()))
