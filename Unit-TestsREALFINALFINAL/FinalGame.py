@@ -1,6 +1,6 @@
 import random
 import os
-
+import time
 class Card:
     def __init__(self, rank, suit):
         self.rank = rank
@@ -69,7 +69,7 @@ def pontoon():
                 print(f"\n{player.name}'s turn:")
                 print("Your hand: " + ', '.join(f"{card.rank} of {card.suit}" for card in player.hand))
                 print("Hand value: " + str(player.calculate_hand_value()))
-                
+                time.sleep(1.5)
                 if player.calculate_hand_value() == 21:
                     print("Pontoon! You win!")
                     # player.balance += player.bet * 1.5
